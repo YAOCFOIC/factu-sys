@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-secreta-en-desarrollo')
 
 # Configuración de DEBUG y ALLOWED_HOSTS
 if RENDER:
-    DEBUG = False
+    DEBUG = True
     ALLOWED_HOSTS = ['factusys.onrender.com', '.onrender.com']  # Reemplaza con tu dominio en Render
 else:
     DEBUG = True
