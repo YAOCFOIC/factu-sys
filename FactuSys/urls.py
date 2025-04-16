@@ -18,9 +18,16 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+<<<<<<< HEAD
 from django.urls import include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),  # Incluye las URLs de la app core
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+=======
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6

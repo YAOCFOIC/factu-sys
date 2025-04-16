@@ -9,8 +9,12 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
+<<<<<<< HEAD
 import os
 import dj_database_url
+=======
+
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -24,12 +28,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y1g)exmv$xpve75sxo$mu@-qf@oy$$sq1prp*)aqgq97c+955-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+<<<<<<< HEAD
 DEBUG = False
+=======
+DEBUG = True
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 
 ALLOWED_HOSTS = []
 
 
 # Application definition
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -44,7 +56,10 @@ AUTH_USER_MODEL = 'core.User'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+<<<<<<< HEAD
     'whitenoise.middleware.WhiteNoiseMiddleware',
+=======
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -74,20 +89,30 @@ TEMPLATES = [
 WSGI_APPLICATION = 'FactuSys.wsgi.application'
 
 
+<<<<<<< HEAD
 # Seguridad
 SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-secreta-en-desarrollo')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 
+=======
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
+<<<<<<< HEAD
     'default': dj_database_url.config(
         default='postgresql://bdfactusys_user:YiLLggKnYIaiMOqV3OEsz5h7yN9mHVzG@dpg-cvvfopi4d50c739blg4g-a.virginia-postgres.render.com/bdfactusys',
         conn_max_age=600,
         ssl_require=True
     )
+=======
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 }
 
 
@@ -127,10 +152,18 @@ USE_TZ = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+<<<<<<< HEAD
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+=======
+STATIC_URL = 'static/'
+
+# Default primary key field type
+# https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
+
+>>>>>>> 3fc74568d910f11ec3eee316e0381bddd6bea6c6
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
