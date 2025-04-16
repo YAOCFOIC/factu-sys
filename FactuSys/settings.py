@@ -21,12 +21,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-y1g)exmv$xpve75sxo$mu@-qf@oy$$sq1prp*)aqgq97c+955-'
+SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-secreta-en-desarrollo')
 
+
+RENDER = os.environ.get('RENDER') is not None
+
+DEBUG = not RENDER
 # SECURITY WARNING: don't run with debug turned on in production!
-if os.getenv('RENDER'):
-    DEBUG = False
-    ALLOWED_HOSTS = ['*']
+if RENDER:
+    ALLOWED_HOSTS = ['factusys.onrender.com', '.onrender.com']
+else:
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 INSTALLED_APPS = [
@@ -57,7 +62,7 @@ ROOT_URLCONF = 'FactuSys.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'core', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,7 +79,6 @@ WSGI_APPLICATION = 'FactuSys.wsgi.application'
 
 
 # Seguridad
-SECRET_KEY = os.environ.get('SECRET_KEY', 'clave-secreta-en-desarrollo')
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
 

@@ -1,0 +1,193 @@
+{% extends "./layouts/base.html" %}
+
+{% block content %}
+{% load static %}
+<!-- Hero Section -->
+<section class="bg-primary text-white text-center py-5">
+    <div class="container">
+      <h1 id="titulo" class="display-4">Bienvenido a FactuSys</h1>
+      <p id="parrafo" class="lead">Soluciones modernas para tu facturación electrónica</p>
+      <div class="logo-container">
+        <img id="logo" src="https://cdn-icons-png.freepik.com/512/257/257916.png" alt="Logo" class="logo">
+      </div>
+    </div>
+</section>
+
+<!-- Sobre Nosotros -->
+<section class="py-5" id="sobre-nosotros">
+  <div class="container">
+    <h2 class="mb-4 text-center">Sobre Nosotros</h2>
+    <p>Somos una empresa dedicada a brindar soluciones digitales eficientes en facturación electrónica, cumpliendo con las normativas vigentes y ofreciendo un servicio confiable.</p>
+  </div>
+</section>
+
+<!-- Servicios -->
+<section class="bg-light py-5" id="servicios">
+    <div class="container">
+      <h2 class="mb-4 text-center">Nuestros Servicios</h2>
+      <div class="row">
+  
+        <!-- Servicio 1: Gestión de Facturas -->
+        <div class="col-md-4 mb-4 text-center">
+          <!-- Imagen circular sobre el título -->
+          <div class="mb-3">
+            <img src="https://www.enelx.com/content/dam/local-argentina/01-img-slider/empresas/slide-hero-gestion-de-facturas-UBM_1440x768.jpg" class="rounded-circle" alt="Gestión de Facturas" style="width: 15rem; height: 15rem; object-fit: cover;">
+          </div>
+          <!-- Línea horizontal (separador) -->
+          <hr style="border-top: 2px solid #ddd; width: 50%; margin: 0 auto;">
+          <h5 class="mt-3">Gestión de Facturas</h5>
+          <p>Genera, administra y consulta tus facturas electrónicas de forma fácil.</p>
+        </div>
+  
+        <!-- Servicio 2: Soporte XML -->
+        <div class="col-md-4 mb-4 text-center">
+          <!-- Imagen circular sobre el título -->
+          <div class="mb-3">
+            <img src="https://www.ovhcloud.com/sites/default/files/styles/desktop_full_width/public/2023-09/ovhcloud_file_storage_nasha_600x400.png" class="rounded-circle" alt="Soporte XML" style="width: 15rem; height: 15rem; object-fit: cover;">
+          </div>
+          <!-- Línea horizontal (separador) -->
+          <hr style="border-top: 2px solid #ddd; width: 50%; margin: 0 auto;">
+          <h5 class="mt-3">Soporte XML</h5>
+          <p>Archivos estructurados bajo el estándar UBL listos para su validación.</p>
+        </div>
+  
+        <!-- Servicio 3: Reportes y Respaldo -->
+        <div class="col-md-4 mb-4 text-center">
+          <!-- Imagen circular sobre el título -->
+          <div class="mb-3">
+            <img src="https://www.esedsl.com/hs-fs/hubfs/backup.jpg?width=316&name=backup.jpg" class="rounded-circle" alt="Reportes y Respaldo" style="width: 15rem; height: 15rem; object-fit: cover;">
+          </div>
+          <!-- Línea horizontal (separador) -->
+          <hr style="border-top: 2px solid #ddd; width: 50%; margin: 0 auto;">
+          <h5 class="mt-3">Reportes y Respaldo</h5>
+          <p>Descarga reportes en PDF y guarda respaldos automáticos de tu información.</p>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Archivos XML -->
+<section class="py-5" id="archivos-xml">
+    <div class="container">
+      <h2 class="mb-4 text-center">Archivos XML</h2>
+      <div class="row align-items-center">
+        <!-- Imagen izquierda -->
+        <div class="col-md-6 text-center">
+          <img src="https://www.manualweb.net/img/logos/xml.png" alt="Imagen Archivos XML" class="img-fluid rounded" style="max-width: 90%; height: auto;">
+        </div>
+        <!-- Texto central -->
+        <div class="col-md-6">
+          <p>Almacenamos cada factura en formato XML UBL listo para ser validado por la DIAN. Garantizamos la integridad y la estructura correcta de tus datos tributarios. Además, proporcionamos acceso rápido a todos tus archivos para una consulta sencilla y segura.</p>
+          <p>Con nuestro sistema, puedes descargar, consultar y verificar tus facturas electrónicas en cualquier momento, asegurando el cumplimiento con las normativas fiscales colombianas. Nuestro proceso es seguro, rápido y eficiente, minimizando el riesgo de errores en la validación.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Envío a la DIAN -->
+  <section class="bg-light py-5" id="enviar-dian">
+    <div class="container">
+      <h2 class="mb-4 text-center">Envío a la DIAN</h2>
+      <div class="row align-items-center">
+        
+         <!-- Texto central -->
+        <div class="col-md-6">
+            <p>Conexión directa con los servidores de la DIAN para enviar automáticamente tus facturas y validar la legalidad del documento en tiempo real. Nuestro sistema te permite enviar facturas directamente desde nuestra plataforma, garantizando que siempre cumplas con las regulaciones de la DIAN sin tener que realizar ningún proceso manual.</p>
+            <p>Además, ofrecemos soporte para recibir notificaciones en tiempo real sobre el estado de tus facturas y aseguramos que todos los documentos sean transmitidos correctamente. Con nuestro servicio, puedes tener la tranquilidad de que tus envíos a la DIAN siempre serán eficientes y dentro del marco legal.</p>
+        </div>
+        <!-- Imagen Derecha -->
+        <div class="col-md-6 text-center">
+          <img src="https://belvo.com/wp-content/uploads/2022/12/Blog-post-dian-1.png" alt="Imagen Envío a la DIAN" class="img-fluid rounded" style="max-width: 90%; height: auto;">
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+<!-- Procesamiento de Datos -->
+<section class="py-5" id="procesamiento">
+  <div class="container">
+    <h2 class="mb-4 text-center">Procesamiento de Datos</h2>
+    <h5 class="text-center">Optimización de la contabilidad con algoritmos avanzados </h5>
+    <p class="text-center">Nuestro sistema de procesamiento de datos utiliza algoritmos de última generación para garantizar una gestión eficiente y precisa de los documentos electrónicos que forman parte de tu contabilidad. Nos especializamos en procesar, validar y archivar de manera automatizada cada documento generado durante el ciclo fiscal de tu empresa. Todo el proceso es seguro, rápido y cumple con las normativas legales, lo que te brinda tranquilidad y eficiencia.</p>
+  </div>
+</section>
+
+<!-- Desarrolladores -->
+<section id="desarrolladores" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Conoce a nuestro equipo de desarrollo</h2>
+      <div class="text-center mb-4">
+        <p>Desarrollado con ❤️ por un equipo de ingenieros comprometidos con la transformación digital empresarial. ¡Estamos para ayudarte!</p>
+      </div>
+
+      <div class="row justify-content-center">
+
+        <!-- Fila 1 -->
+        <div class="col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="{% static 'img/leader.jpg' %}" class="card-img-top developer-image" alt="Desarrolladora 1">
+            <div class="card-body">
+              <h5 class="card-title">Lorena Mendez</h5>
+              <p class="card-text">Desarrolladora Backend</p>
+              <p class="card-text">Ana se encarga de la programación backend, asegurando que las aplicaciones sean rápidas, seguras y escalables.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="{% static 'img/leader.jpg' %}" class="card-img-top developer-image" alt="Líder de Desarrollo">
+            <div class="card-body">
+              <h5 class="card-title">Alejandro Osorio</h5>
+              <p class="card-text">Líder de Desarrollo</p>
+              <p class="card-text">Alejandro tiene más de 5 años de experiencia en el desarrollo de software y lidera nuestro equipo técnico. Es responsable de la estrategia y la calidad del código.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila 2 - Centrada con el líder -->
+        <div class="w-100 d-md-none d-block"></div> <!-- Salto para móviles -->
+
+        <div class="col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="{% static 'img/leader.jpg' %}" class="card-img-top developer-image" alt="Líder de Desarrollo">
+            <div class="card-body">
+              <h5 class="card-title">Yovany Figueroa</h5>
+              <p class="card-text">Líder de QA</p>
+              <p class="card-text">Alejandro tiene más de 5 años de experiencia en el desarrollo de software y lidera pruebas de calidad de equipo técnico. </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="{% static 'img/leader.jpg' %}" class="card-img-top developer-image" alt="Desarrolladora 3">
+            <div class="card-body">
+              <h5 class="card-title">Stiven Rincon</h5>
+              <p class="card-text">Desarrolladora Full Stack</p>
+              <p class="card-text">Laura tiene un enfoque integral del desarrollo, trabajando tanto en el frontend como en el backend para crear soluciones completas.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 d-flex justify-content-center">
+          <div class="card h-100" style="width: 18rem;">
+            <img src="{% static 'img/leader.jpg' %}" class="card-img-top developer-image" alt="Desarrollador 4">
+            <div class="card-body">
+              <h5 class="card-title">Sebastian Sánchez</h5>
+              <p class="card-text">Desarrollador de Aplicaciones Móviles</p>
+              <p class="card-text">Pedro se especializa en el desarrollo de aplicaciones móviles, creando soluciones nativas para Android e iOS.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+  
+
+{% endblock %}

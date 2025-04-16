@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}WarriorTime{% endblock %}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <link rel="stylesheet" href="{% static 'css/custom_styles.css' %}">
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top border-bottom border-white">
+            <div class="container">
+                <a class="navbar-brand" href="#">FactuSys</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre-nosotros">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#archivos-xml">Archivos XML</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#enviar-dian">Envío a la DIAN</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#procesamiento">Procesamiento de Datos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#desarrolladores">Desarrolladores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contactanos">Contáctenos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div >
+            {% block content %}{% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-primary text-white text-center py-4">
+            <div class="container">
+                <h5 class="text-center text-white">Contactanos:</h5>
+                <!-- Redes Sociales -->
+                <div class="social-icons mb-0">
+                    <a href="https://facebook.com" target="blank" class="text-white mx-2">
+                        <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
+                    </a>factu37
+                    <a href="https://instagram.com" target="blank" class="text-white mx-2">
+                        <i class="bi bi-instagram" style="font-size: 1.5rem;"></i>
+                    </a>@factu37
+                    <a href="https://linkedin.com" target="blank" class="text-white mx-2" id="contactanos">
+                        <i class="bi bi-whatsapp" style="font-size: 1.5rem;"></i>
+                    </a>3207386558
+                </div>
+                <p class="mb-0">&copy; 2025 FactuSys. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        
+        <script src="{% static 'js/custom_scripts.js' % opcional %}"></script>
+
+    </body>
+</html>
